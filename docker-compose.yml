@@ -3,6 +3,14 @@ version: '3.5'
 services:
 
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     env_file:
       - .env
+    environment:
+      - REDIS_URI=redis://159.223.65.71:6379
+      - ROCKET_PORT=3666
+      - ROCKET_ADDRESS=0.0.0.0
+    ports:
+      - "8000:3666"

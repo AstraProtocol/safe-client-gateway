@@ -13,4 +13,4 @@ services:
       - ROCKET_PORT=3666
       - ROCKET_ADDRESS=0.0.0.0
     ports:
-      - "8000:3666"
+      - "8001:3666"

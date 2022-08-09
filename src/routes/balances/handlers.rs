@@ -70,9 +70,9 @@ pub async fn balances(
 }
 
 pub async fn fiat_codes(context: &RequestContext) -> ApiResult<Vec<String>> {
-    let info_provider = FiatInfoProvider::new(&context);
+    // let info_provider = FiatInfoProvider::new(&context);
     // let mut fiat_codes = info_provider.available_currency_codes().await?;
-    let mut fiat_codes = vec!["USD", "EUR", "VND"];
+    let mut fiat_codes = vec!["USD".to_string(), "EUR".to_string(), "VND".to_string()];
 
     let usd_index = fiat_codes.iter().position(|it| it.eq("USD")).unwrap();
     let eur_index = fiat_codes.iter().position(|it| it.eq("EUR")).unwrap();

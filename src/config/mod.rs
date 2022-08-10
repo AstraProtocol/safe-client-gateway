@@ -38,7 +38,7 @@ pub fn scheme() -> String {
 
 // TIME DURATION VALUES
 fn indefinite_timeout() -> usize {
-    env_with_default("INDEFINITE_TIMEOUT", 60 * 60 * 1000)
+    env_with_default("INDEFINITE_TIMEOUT", 5 * 1000)
 }
 
 pub fn short_error_duration() -> usize {

@@ -36,6 +36,10 @@ impl FiatInfoProvider {
             return Ok(BigDecimal::from(1));
         }
 
+        if &currency_code.to_lowercase() == "vnd" {
+            return Ok(BigDecimal::from(1));
+        }
+
         let currency_code = currency_code.to_uppercase();
         let exchange = self.fetch_exchange().await?;
         match exchange.rates {
